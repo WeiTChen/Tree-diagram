@@ -18,7 +18,7 @@
 @property (nonatomic,strong) NSString *name;
 
 //子模型
-@property (nonatomic,strong) FamilyModel *sunlevel;
+@property (nonatomic,strong) FamilyModel *sunModel;
 
 //绘图时需要用到的记录Fram
 @property (nonatomic,assign) CGRect frame;

@@ -46,7 +46,7 @@
         CGContextAddRect(ref, leftRect);
         //画一些文字在矩形中
         [model.name drawInRect:leftRect withAttributes:AttributeDic];
-        if (i>0 && ((FamilyModel *)_modelAry[i-1]).sunlevel == model.sunlevel)
+        if (i>0 && ((FamilyModel *)_modelAry[i-1]).sunModel == model.sunModel)
         {
             //画一条线连接两个矩形
             CGContextMoveToPoint(ref, x+width*i, y+height/2);
@@ -57,9 +57,9 @@
             
             CGRect sunRect = CGRectMake(x+width*i, y+1.5*height, width, height);
             CGContextAddRect(ref, sunRect);
-            [model.sunlevel.name drawInRect:sunRect withAttributes:AttributeDic];
-            model.sunlevel.frame = sunRect;
-            [_firstAry addObject:model.sunlevel];
+            [model.sunModel.name drawInRect:sunRect withAttributes:AttributeDic];
+            model.sunModel.frame = sunRect;
+            [_firstAry addObject:model.sunModel];
         }
     }
     
@@ -91,7 +91,7 @@
         float height = model.frame.size.height;
         float x = model.frame.origin.x;
         float y = model.frame.origin.y;
-        if (i>0 && ((FamilyModel *)_firstAry[i-1]).sunlevel.name == model.sunlevel.name)
+        if (i>0 && ((FamilyModel *)_firstAry[i-1]).sunModel.name == model.sunModel.name)
         {
             FamilyModel *lastModel = _firstAry[i-1];
             //画一条线连接两个矩形
@@ -104,9 +104,9 @@
             
             CGRect sunRect = CGRectMake(lineX - 0.5*width, y+1.5*height, width, height);
             CGContextAddRect(ref, sunRect);
-            [model.sunlevel.name drawInRect:sunRect withAttributes:AttributeDic];
-            model.sunlevel.frame = sunRect;
-            [modelAry addObject:model.sunlevel];
+            [model.sunModel.name drawInRect:sunRect withAttributes:AttributeDic];
+            model.sunModel.frame = sunRect;
+            [modelAry addObject:model.sunModel];
         }
     }
     return modelAry;

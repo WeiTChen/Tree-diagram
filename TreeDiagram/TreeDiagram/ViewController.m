@@ -65,23 +65,23 @@
                 [array addObject:model];
                 break;
             case 2:
-                ((FamilyModel *)array[0]).sunlevel = model;
-                ((FamilyModel *)array[1]).sunlevel = model;
+                ((FamilyModel *)array[0]).sunModel = model;
+                ((FamilyModel *)array[1]).sunModel = model;
                 model.level = 2;
                 break;
             case 3:
-                ((FamilyModel *)array[0]).sunlevel.sunlevel = model;
-                ((FamilyModel *)array[1]).sunlevel.sunlevel = model;
+                ((FamilyModel *)array[0]).sunModel.sunModel = model;
+                ((FamilyModel *)array[1]).sunModel.sunModel = model;
                 model.level = 3;
                 break;
             case 4:
-                ((FamilyModel *)array[0]).sunlevel.sunlevel.sunlevel = model;
-                ((FamilyModel *)array[1]).sunlevel.sunlevel.sunlevel = model;
+                ((FamilyModel *)array[0]).sunModel.sunModel.sunModel = model;
+                ((FamilyModel *)array[1]).sunModel.sunModel.sunModel = model;
                 model.level = 3;
                 break;
             case 5:
-                ((FamilyModel *)array[0]).sunlevel.sunlevel.sunlevel.sunlevel = model;
-                ((FamilyModel *)array[1]).sunlevel.sunlevel.sunlevel.sunlevel = model;
+                ((FamilyModel *)array[0]).sunModel.sunModel.sunModel.sunModel = model;
+                ((FamilyModel *)array[1]).sunModel.sunModel.sunModel.sunModel = model;
                 model.level = 3;
                 break;
             default:
